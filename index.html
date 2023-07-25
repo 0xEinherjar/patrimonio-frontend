@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="c-nav">
+            <a href="./index.html" class="c-nav__link is-active">Inserir</a>
+            <a href="./consult.html" class="c-nav__link">Consultar</a>
+        </nav>
+    </header>
+    <form class="c-search" id="search-unit">
+        <input class="c-search__input" type="text" name="" id="" placeholder="Pesquisar por unidade">
+        <button class="c-search__button" type="submit">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" fill="#9AA0A6"/>
+                <path d="M21.2996 22.0001C21.1196 22.0001 20.9396 21.9301 20.8096 21.8001L18.9496 19.9401C18.6796 19.6701 18.6796 19.2301 18.9496 18.9501C19.2196 18.6801 19.6596 18.6801 19.9396 18.9501L21.7996 20.8101C22.0696 21.0801 22.0696 21.5201 21.7996 21.8001C21.6596 21.9301 21.4796 22.0001 21.2996 22.0001Z" fill="#9AA0A6"/>
+            </svg>
+        </button>
+        <button class="c-search__clear" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#9AA0A6"/>
+                <path d="M13.0601 12.0001L15.3601 9.70011C15.6501 9.41011 15.6501 8.93011 15.3601 8.64011C15.0701 8.35011 14.5901 8.35011 14.3001 8.64011L12.0001 10.9401L9.70011 8.64011C9.41011 8.35011 8.93011 8.35011 8.64011 8.64011C8.35011 8.93011 8.35011 9.41011 8.64011 9.70011L10.9401 12.0001L8.64011 14.3001C8.35011 14.5901 8.35011 15.0701 8.64011 15.3601C8.79011 15.5101 8.98011 15.5801 9.17011 15.5801C9.36011 15.5801 9.55011 15.5101 9.70011 15.3601L12.0001 13.0601L14.3001 15.3601C14.4501 15.5101 14.6401 15.5801 14.8301 15.5801C15.0201 15.5801 15.2101 15.5101 15.3601 15.3601C15.6501 15.0701 15.6501 14.5901 15.3601 14.3001L13.0601 12.0001Z" fill="#9AA0A6"/>
+            </svg>                
+        </button>
+    </form>
+    <div class="output-unit close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path opacity="0.4" d="M10.07 2.8201L3.14002 8.37009C2.36002 8.99009 1.86002 10.3001 2.03002 11.2801L3.36002 19.2401C3.60002 20.6601 4.96002 21.8101 6.40002 21.8101H17.6C19.03 21.8101 20.4 20.6501 20.64 19.2401L21.97 11.2801C22.13 10.3001 21.63 8.99009 20.86 8.37009L13.93 2.83008C12.86 1.97008 11.13 1.9701 10.07 2.8201Z" fill="#BDC1C6"/>
+            <path d="M12 15.5C13.3807 15.5 14.5 14.3807 14.5 13C14.5 11.6193 13.3807 10.5 12 10.5C10.6193 10.5 9.5 11.6193 9.5 13C9.5 14.3807 10.6193 15.5 12 15.5Z" fill="#BDC1C6"/>
+        </svg>
+        <span class="output-unit__result"></span>
+        <button class="output-unit__close" type="button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.4" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#9AA0A6"/>
+                <path d="M13.0601 12.0001L15.3601 9.70011C15.6501 9.41011 15.6501 8.93011 15.3601 8.64011C15.0701 8.35011 14.5901 8.35011 14.3001 8.64011L12.0001 10.9401L9.70011 8.64011C9.41011 8.35011 8.93011 8.35011 8.64011 8.64011C8.35011 8.93011 8.35011 9.41011 8.64011 9.70011L10.9401 12.0001L8.64011 14.3001C8.35011 14.5901 8.35011 15.0701 8.64011 15.3601C8.79011 15.5101 8.98011 15.5801 9.17011 15.5801C9.36011 15.5801 9.55011 15.5101 9.70011 15.3601L12.0001 13.0601L14.3001 15.3601C14.4501 15.5101 14.6401 15.5801 14.8301 15.5801C15.0201 15.5801 15.2101 15.5101 15.3601 15.3601C15.6501 15.0701 15.6501 14.5901 15.3601 14.3001L13.0601 12.0001Z" fill="#9AA0A6"/>
+            </svg> 
+        </button>
+    </div>
+    <section class="">
+        <form class="c-search c-search--property close" id="search-property">
+            <input class="c-search__input" type="number" name="" id="" placeholder="Pesquisar por número de patrimônio">
+            <button class="c-search__button" type="submit">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z" fill="#9AA0A6"/>
+                    <path d="M21.2996 22.0001C21.1196 22.0001 20.9396 21.9301 20.8096 21.8001L18.9496 19.9401C18.6796 19.6701 18.6796 19.2301 18.9496 18.9501C19.2196 18.6801 19.6596 18.6801 19.9396 18.9501L21.7996 20.8101C22.0696 21.0801 22.0696 21.5201 21.7996 21.8001C21.6596 21.9301 21.4796 22.0001 21.2996 22.0001Z" fill="#9AA0A6"/>
+                </svg>
+            </button>
+            <button class="c-search__clear" type="button">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path opacity="0.4" d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="#9AA0A6"/>
+                    <path d="M13.0601 12.0001L15.3601 9.70011C15.6501 9.41011 15.6501 8.93011 15.3601 8.64011C15.0701 8.35011 14.5901 8.35011 14.3001 8.64011L12.0001 10.9401L9.70011 8.64011C9.41011 8.35011 8.93011 8.35011 8.64011 8.64011C8.35011 8.93011 8.35011 9.41011 8.64011 9.70011L10.9401 12.0001L8.64011 14.3001C8.35011 14.5901 8.35011 15.0701 8.64011 15.3601C8.79011 15.5101 8.98011 15.5801 9.17011 15.5801C9.36011 15.5801 9.55011 15.5101 9.70011 15.3601L12.0001 13.0601L14.3001 15.3601C14.4501 15.5101 14.6401 15.5801 14.8301 15.5801C15.0201 15.5801 15.2101 15.5101 15.3601 15.3601C15.6501 15.0701 15.6501 14.5901 15.3601 14.3001L13.0601 12.0001Z" fill="#9AA0A6"/>
+                </svg>                
+            </button>
+        </form>
+        <form class="output-property close" id="save-property">
+            <div class="output-property__field">
+                <span class="output-property__label">Patrimônio</span>
+                <div class="output-property__result" id="registration"></div>
+            </div>
+            <div class="output-property__field">
+                <span class="output-property__label">Descrição</span>
+                <div class="output-property__result" id="description"></div>
+            </div>
+            <div class="output-property__field">
+                <span class="output-property__label">Sala</span>
+                <input class="output-property__input" type="text" name="room" id="room" placeholder="Sala em que está localizado">
+            </div>
+            <div class="output-property__footer">
+                <button class="output-property__button" type="submit">Inserir</button>
+            </div>
+        </form>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

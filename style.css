@@ -1,0 +1,215 @@
+:root {
+    --bg-color-primary: #1A1B1D;
+    --bg-color-secondary: #28292B;
+    --bg-color-tertiary: #4E4F51;
+    --text-color-primary: #F4F4F4;
+    --text-color-secondary: #BDC1C6;
+    --text-color-tertiary: #E8EAED;
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: inherit;
+}
+svg {
+    display: inline-block;
+    vertical-align: middle;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+input,
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+button {
+    cursor: pointer;
+}
+html {
+    font-size: 62.5%;
+}
+html, body {
+    height: auto;
+}
+body {
+    font-size: 1.6rem;
+    background-color: #1A1B1D;
+    color: var(--text-color-primary);
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: 100px;
+}
+
+.c-search {
+    background-color: #28292B;
+    height: 48px;
+    border-radius: 12px;
+    padding-inline: 16px;
+    width: min(520px, 100%);
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+}
+.c-search__input {
+    height: 100%;
+    width: 100%;
+}
+.c-search__button {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.c-search__clear {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 16px;
+    border-left: 1px solid rgba(189, 193, 198, 0.40);
+    margin-left: 16px;
+}
+.output-unit {
+    width: min(520px, 100%);
+    display: flex;
+    align-items: center;
+    margin-inline: auto;
+    margin-top: 24px;
+    gap: 16px;
+    padding: 24px 16px;
+    border-radius: 12px;
+    /* background-color: #4E4F51; */
+    border: 1px solid #BDC1C6;
+}
+.output-unit__result {
+    flex-grow: 1;
+}
+.c-search--property {
+    margin-top: 40px;
+}
+
+.output-property {
+    margin-top: 40px;
+    width: min(520px, 100%);
+    margin-inline: auto;
+    display: grid;
+    gap: 24px;
+}
+.output-property__field {
+    display: grid;
+    gap: 12px;
+}
+.output-property__label {
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    font-weight: 500;
+    color: #BDC1C6;
+}
+.output-property__result {
+    height: 48px;
+    border-bottom: 1px solid #BDC1C6;
+    line-height: 48px;
+}
+.output-property__input {
+    height: 48px;
+    border: 1px solid #FF6370;
+    border-radius: 12px;
+    padding-inline: 16px;
+}
+.output-property__footer {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-inline: 24px;
+    background-color: #28292B;
+    border-radius: 12PX;
+    margin-top: 22PX;
+    gap: 24px;
+}
+.output-property__button {
+    height: 32px;
+    padding-inline: 16px;
+    border-radius: 8px;
+    background-color: #4E4F51;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.close {
+    display: none;
+}
+.c-alert {
+    border-radius: 8px;
+    min-height: 40px;
+    width: min(520px, 100%);
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    background-color: #FF6370;
+    margin-inline: auto;
+    padding: 8px 16px;
+    gap: 10px;
+    font-size: 1.5rem;
+    margin-top: 24px;
+}
+.c-alert--success {
+    background-color: #2FC687;
+}
+.c-alert--warning {
+    background-color: #FFDE6B;
+    color: #1A1B1D;
+}
+.c-nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    height: 82px;
+    margin-bottom: 60px;
+    width: min(520px, 100%);
+    margin-inline: auto;
+}
+.c-nav__link {
+    font-weight: 500;
+    padding-inline: 8px;
+    height: 100%;
+    line-height: 82px;
+    position: relative;
+}
+.c-nav__link.is-active::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100%;
+    background-color: #F4F4F4;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+}
+.table {
+    text-align: left;
+    width: min(820px, 100%);
+    margin-inline: auto;
+    margin-top: 60px;
+}
+th, td {
+    padding: 8px 16px 8px 0;
+}
